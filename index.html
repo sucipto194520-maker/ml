@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Garcep Login MLBB</title>
+</head>
+<body>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+        Membuka Mobile Legends... Mohon tunggu sebentar.
+    </p>
+
+    <script>
+        // Perintah memaksa sistem Android membuka package Mobile Legends
+        window.location.href = "intent:#Intent;package=com.mobile.legends;end";
+        
+        // Cadangan jika perintah intent diblokir browser, dilempar langsung ke Play Store internal
+        setTimeout(function() {
+            window.location.href = "market://details?id=com.mobile.legends";
+        }, 800);
+    </script>
+</body>
+</html>
