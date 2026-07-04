@@ -2,21 +2,46 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garcep Login MLBB</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: #ffffff;
+            padding-top: 100px;
+        }
+        .btn-garcep {
+            display: inline-block;
+            background-color: #ff9800;
+            color: #fff;
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            transition: 0.2s;
+        }
+        .btn-garcep:active {
+            transform: scale(0.95);
+        }
+    </style>
 </head>
 <body>
-    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
-        Membuka Mobile Legends... Mohon tunggu sebentar.
-    </p>
+
+    <h2>SIAP-SIAP LOGIN GARCEP!</h2>
+    <p>Ketuk tombol di bawah untuk langsung membuka Mobile Legends:</p>
+    
+    <br><br>
+    
+    <!-- Tombol sakti yang lolos blokir sistem keamanan Chrome -->
+    <a href="intent:#Intent;package=com.mobile.legends;end" class="btn-garcep">🚀 GAS MAIN ML</a>
 
     <script>
-        // Perintah memaksa sistem Android membuka package Mobile Legends
+        // Sistem otomatis cadangan tetap berjalan, tapi tombol di atas adalah pengaman utamanya
         window.location.href = "intent:#Intent;package=com.mobile.legends;end";
-        
-        // Cadangan jika perintah intent diblokir browser, dilempar langsung ke Play Store internal
-        setTimeout(function() {
-            window.location.href = "market://details?id=com.mobile.legends";
-        }, 800);
     </script>
 </body>
 </html>
